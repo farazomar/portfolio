@@ -68964,6 +68964,7 @@
           },
           tabs: { borderRight: "1px solid ".concat(e.palette.divider) },
         })),
+        
         et = () => {
           const t = Je(),
             [r, n] = e.useState(0),
@@ -69107,7 +69108,7 @@
               "p",
               null,
               "I am a recent graduate in Industrial Engineering with specialization in Optimization and System Analytics from ",
-              e.createElement("b", null, "Concorida University, Canada."),
+              e.createElement("b", null, "Concorida University, Montreal, Canada."),
             ),
             r = e.createElement(
               "p",
@@ -69151,13 +69152,42 @@
                     ].map(function (t, r) {
                       return e.createElement(
                         s,
-                        { delay: "".concat(r + 1, "00ms") },
+                        { delay: "".concat(r + 1) },
                         e.createElement("li", null, t)
                       );
                     })
                   ),
-                  [r]
+                  e.createElement(
+                    "div",
+                    { className: "about-description" },
+                    "Key domains and concepts I have been working with:",
+                    e.createElement(
+                      "ul",
+                      { className: "tech-stack" },
+                      [
+                        "Statistical Analysis",
+                        "Forecasting",
+                        "Time-Series Analysis",
+                        "User Stories",
+                        "Use Cases",
+                        "Wireframing",
+                        "UML",
+                        "SDLC",
+                        "Agile",
+                        "Kanban",
+                        "Scrum",
+                      ].map(function (t, r) {
+                        return e.createElement(
+                          s,
+                          { delay: "".concat(r + 1, "00ms") },
+                          e.createElement("li", null, t)
+                        );
+                      })
+                    ),
+                    [r]
+                  ),
                 ),
+                
                 e.createElement(
                   "div",
                   { className: "about-image" },
@@ -69167,7 +69197,8 @@
                   })
                 )
               )
-            )
+            ),
+           
           );
         }
       }
