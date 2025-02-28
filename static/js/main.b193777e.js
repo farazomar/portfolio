@@ -69063,7 +69063,7 @@
         };
         
         
-      class tt extends e.Component {
+        class tt extends e.Component {
         constructor() {
           super(),
             (this.state = { expanded: !0, activeKey: "1" }),
@@ -70303,7 +70303,7 @@
               },
             },
             r = {
-                "AI-based defect identification system in a manufacturing plan": {
+                "AI-based defect identification system in a manufacturing plant": {
                 desc: "Implementing automated image processing techniques using a deep learning CNN models to analyze over 10,000 product images daily to identify visual defects made during manufacturing.",
                 techStack: "Python(Flask, Convolutional Neural Networks, Tensorflow, OpenCV), HTML, CSS, JavaScript",
               },
