@@ -67106,7 +67106,7 @@
               e.createElement(
                 "div",
                 { className: "intro-desc" },
-                "I’m a results-driven Business Analyst with a background in Industrial Engineering, skilled in data analysis, process optimization, and strategic problem-solving to drive business success."
+                "I’m a Microsoft Certified Data Analyst with a love for storytelling with data and creative visualization. Looking forward to unearthing actionable and data-driven insights."
               ),
               e.createElement(
                 "a",
@@ -70280,9 +70280,16 @@
         }
         render() {
           const t = {
-              "Coffee Shop Sales Analysis": {
-                title: "Coffee Shop Sales Analysis",
-                desc: "Sales Analysis Dashboard delivering actionable insights into a coffee shop's sales performance.",
+              "Zoom Booking Analysis": {
+                title: "Zoom Booking Analysis",
+                desc: "Dashboard visualising and Report Analysing Zoom Subscription Trends in 2021 on the basis of different regions from the globe, different plan types, and different plan period types.",
+                techStack: "Power BI, Excel, SQL",
+                open: "https://github.com/farazomar/Zoom_Analysis",
+                image: "assets/Zoom_Analysis.png",
+              },
+              "Coffee Shop Analysis": {
+                title: "Coffee Shop Analysis",
+                desc: "Sales Analysis Dashboard delivering actionable insights into a coffee shop's sales performance based on the product type, profit overview and sales overview .",
                 techStack: "Power BI, Excel, SQL",
                 open: "https://app.powerbi.com/view?r=eyJrIjoiYzZjNTgzNTItMzlkMS00NDI3LWJhMzEtZTI0OTBkZTA3M2I0IiwidCI6Ijc1ZGNjYmU1LWRjMTUtNDEwNS1iM2JiLTljZDBlN2E3YTY5MiJ9&pageName=ba4279ef49f196f7b630",
                 image: "assets/Coffee Shop.png",
