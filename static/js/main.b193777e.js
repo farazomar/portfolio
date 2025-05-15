@@ -68979,7 +68979,7 @@
                 ],
               },
               "ABs Manufacturing": {
-                jobTitle: "Data Analyst Intern @",
+                jobTitle: "Supply Chain Data Analyst @",
                 duration: "Jan. 2022 - Dec. 2022",
                 desc: [
                   "Used Python and SQL to analyze data, delivering insights focused on business impact and actionable outcomes while collaborating with cross-functional teams to enhance decision-making.",
