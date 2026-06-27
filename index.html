@@ -1,4 +1,302 @@
-<!doctype html><html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<head><meta charset="utf-8"/><link rel="icon" href="favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#f8f9fa"/><meta name="description" content="Web site created using create-react-app"/><link rel="apple-touch-icon" href="logo192.png"/><link rel="manifest" href="manifest.json"/><title>Faraz Omar</title><script defer="defer" src="static/js/main.b193777e.js"></script><link href="static/css/main.65d60b23.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body><style>@import url(https://fonts.googleapis.com/css2?family=NTR&amp;display=swap);</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faraz Omar | Portfolio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101011'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='700' fill='%2306d6a0' text-anchor='middle'%3EFO%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Side fixed bits -->
+<div class="side-text side-text--left">farazomar4@gmail.com</div>
+<div class="side-text side-text--phone">(438) 467-1600</div>
+<div class="side-socials">
+  <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+  <a href="mailto:farazomar4@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+  <span class="side-line"></span>
+</div>
+
+<!-- HERO -->
+<section id="home" class="section hero">
+  <div class="hero-photo">
+    <div class="hero-photo__mask">
+      <img src="assets/avatar.jpg" alt="Faraz Omar">
+    </div>
+  </div>
+  <div class="hero-code">
+    <div class="hero-code__bar"><span></span><span></span><span></span></div>
+    <div class="hero-code__body" id="hero-typing"></div>
+  </div>
+  <div class="hero-text">
+    <p class="hero-greet">Hello, I'm</p>
+    <h1 class="hero-name">Faraz Omar</h1>
+    <p class="hero-role">A Supply Chain &amp; Data Analyst</p>
+    <p class="hero-location">Based in Toronto, ON <span class="flag" role="img" aria-label="Canada flag"><svg viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="10" fill="#fff"/><rect width="4" height="10" fill="#d52b1e"/><rect x="12" width="4" height="10" fill="#d52b1e"/><path d="M8 2.2l.5 1.1 1.2-.3-.5 1.1.9.7-1.2.2.1 1.2-1-.6-1 .6.1-1.2-1.2-.2.9-.7-.5-1.1 1.2.3z" fill="#d52b1e"/></svg></span></p>
+  </div>
+  <div class="hero-actions">
+    <a class="btn btn--outline" href="assets/resume.pdf" download>Download Resume</a>
+    <a class="btn btn--filled" href="#about">Know More</a>
+    <a class="btn btn--outline" href="https://learn.microsoft.com/en-gb/users/FarazOmar-9012/credentials/9CE67602448522D6" target="_blank" rel="noopener">Verify Certification</a>
+  </div>
+  <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about reveal">
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-grid">
+    <div class="about-stats">
+      <div class="stat-card reveal">
+        <span class="stat-label">EXPERIENCE</span>
+        <i class="bi bi-award stat-icon"></i>
+        <span class="stat-value">2.5+ Years</span>
+      </div>
+      <div class="stat-card reveal">
+        <span class="stat-label">PROJECTS</span>
+        <i class="bi bi-folder2-open stat-icon"></i>
+        <span class="stat-value">4+</span>
+      </div>
+      <div class="stat-card reveal">
+        <span class="stat-label">CERTIFICATIONS</span>
+        <i class="bi bi-patch-check stat-icon"></i>
+        <span class="stat-value">1 Active</span>
+      </div>
+    </div>
+
+    <div class="about-copy reveal">
+      <p>Here's a gist, I'm a Master's graduate in Industrial Engineering from <strong>Concordia University</strong> and a Supply Chain &amp; Data Analyst by profession. As an undergraduate, I hold a Bachelor's degree in Mechanical Engineering from <strong>Aligarh Muslim University</strong>, India.</p>
+      <p>I've worked on several projects throughout the years which includes ETL Pipeline Development, Demand Forecasting Automation, SAP Process Automation and KPI Reporting &amp; Analytics.</p>
+      <p>I believe in qualitative work rather than quantitative and believe that my skills will support your business to succeed in your supply chain and data objectives.</p>
+      <p>Feel free to get in touch.</p>
+      <a href="#contact" class="btn btn--filled">Let's Talk</a>
+    </div>
+
+    <div class="about-deco" aria-hidden="true">
+      <svg viewBox="0 0 220 220" width="220" height="220">
+        <circle cx="60" cy="160" r="34" fill="none" stroke="#3a3a3f" stroke-width="2" stroke-dasharray="4 6"/>
+        <circle cx="60" cy="160" r="8" fill="#f1faee"/>
+        <polygon points="150,40 170,70 130,70" fill="none" stroke="#06d6a0" stroke-width="2"/>
+        <rect x="120" y="110" width="80" height="60" rx="6" fill="none" stroke="#3a3a3f" stroke-width="2"/>
+        <line x1="120" y1="130" x2="200" y2="130" stroke="#3a3a3f" stroke-width="2"/>
+        <path d="M40 60 q20 -30 10 -50" fill="none" stroke="#06d6a0" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section skills reveal">
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skill-category">
+    <p class="skill-category__label">PROGRAMMING &amp; DATA</p>
+    <div class="skill-grid">
+      <div class="skill-card reveal"><i class="bi bi-filetype-py skill-icon"></i><span>PYTHON</span><div class="skill-bar"><span style="width:92%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-database skill-icon"></i><span>SQL</span><div class="skill-bar"><span style="width:85%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-code-slash skill-icon"></i><span>VBA</span><div class="skill-bar"><span style="width:80%"></span></div></div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <p class="skill-category__label">ANALYSIS &amp; OPTIMIZATION</p>
+    <div class="skill-grid">
+      <div class="skill-card reveal"><i class="bi bi-search skill-icon"></i><span>ROOT CAUSE ANALYSIS</span><div class="skill-bar"><span style="width:90%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-arrow-repeat skill-icon"></i><span>CONTINUOUS IMPROVEMENT</span><div class="skill-bar"><span style="width:88%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-graph-up-arrow skill-icon"></i><span>LEAN SIX SIGMA</span><div class="skill-bar"><span style="width:85%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-diagram-3 skill-icon"></i><span>DMAIC</span><div class="skill-bar"><span style="width:82%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-bar-chart-line skill-icon"></i><span>DEMAND FORECASTING</span><div class="skill-bar"><span style="width:90%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-clock-history skill-icon"></i><span>TIME-SERIES ANALYSIS</span><div class="skill-bar"><span style="width:80%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-clipboard-data skill-icon"></i><span>KPI REPORTING</span><div class="skill-bar"><span style="width:88%"></span></div></div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <p class="skill-category__label">SUPPLY CHAIN SYSTEMS</p>
+    <div class="skill-grid">
+      <div class="skill-card reveal"><i class="bi bi-truck skill-icon"></i><span>BLUE YONDER LDE</span><div class="skill-bar"><span style="width:88%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-boxes skill-icon"></i><span>IPFR</span><div class="skill-bar"><span style="width:80%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-building skill-icon"></i><span>SAP</span><div class="skill-bar"><span style="width:82%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-diagram-2 skill-icon"></i><span>ERP / MRP</span><div class="skill-bar"><span style="width:78%"></span></div></div>
+    </div>
+  </div>
+
+  <div class="skill-category">
+    <p class="skill-category__label">TOOLS</p>
+    <div class="skill-grid">
+      <div class="skill-card reveal"><i class="bi bi-bar-chart skill-icon"></i><span>POWER BI</span><div class="skill-bar"><span style="width:92%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-lightning-charge skill-icon"></i><span>POWER AUTOMATE</span><div class="skill-bar"><span style="width:88%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-file-earmark-spreadsheet skill-icon"></i><span>EXCEL</span><div class="skill-bar"><span style="width:92%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-server skill-icon"></i><span>MS ACCESS</span><div class="skill-bar"><span style="width:75%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-share skill-icon"></i><span>SHAREPOINT</span><div class="skill-bar"><span style="width:80%"></span></div></div>
+      <div class="skill-card reveal"><i class="bi bi-graph-up skill-icon"></i><span>TABLEAU</span><div class="skill-bar"><span style="width:78%"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS (replaces Portfolio) -->
+<section id="achievements" class="section achievements reveal">
+  <h2 class="section-title">Highlights</h2>
+  <div class="achv-grid">
+    <article class="achv-card reveal">
+      <i class="bi bi-diagram-3-fill achv-icon"></i>
+      <h3>ETL AUTOMATION PIPELINE</h3>
+      <p class="achv-sub">SharePoint &rarr; Python &rarr; SQL &rarr; Power Automate &rarr; SAP</p>
+      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> 95% improvement in data accuracy</p>
+    </article>
+    <article class="achv-card reveal">
+      <i class="bi bi-bar-chart-steps achv-icon"></i>
+      <h3>DEMAND FORECAST AUTOMATION</h3>
+      <p class="achv-sub">Python automation built on Blue Yonder LDE APIs</p>
+      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> Automated exception flagging for weekly review</p>
+    </article>
+    <article class="achv-card reveal">
+      <i class="bi bi-gear-wide-connected achv-icon"></i>
+      <h3>SAP PROCESS AUTOMATION</h3>
+      <p class="achv-sub">Built with Python, SQL &amp; Excel (VBA)</p>
+      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> Eliminated high-volume manual data processes</p>
+    </article>
+    <a class="achv-card reveal achv-card--link" href="https://learn.microsoft.com/en-gb/users/FarazOmar-9012/credentials/9CE67602448522D6" target="_blank" rel="noopener">
+      <i class="bi bi-patch-check-fill achv-icon"></i>
+      <h3>PL-300 CERTIFIED</h3>
+      <p class="achv-sub">Microsoft Power BI Data Analyst Associate</p>
+      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> Verify Certification</p>
+    </a>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="section timeline-section reveal">
+  <h2 class="section-title">Timeline</h2>
+  <div class="timeline-legend">
+    <span><i class="dot dot--employment"></i> Employment</span>
+    <span><i class="dot dot--project"></i> Projects</span>
+    <span><i class="dot dot--education"></i> Education</span>
+  </div>
+
+  <div class="timeline reveal">
+    <div class="timeline-item reveal" data-type="employment">
+      <div class="timeline-node">6</div>
+      <div class="timeline-card">
+        <h3>Loblaw Companies Limited</h3>
+        <p class="timeline-date">Jun 2025 &ndash; Present &middot; Brampton, Ontario</p>
+        <p class="timeline-role">Supply Chain Replenishment Analyst</p>
+        <p>Built end-to-end ETL and demand-forecast automation pipelines spanning Python, SQL, SAP and Power Automate.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-type="project">
+      <div class="timeline-node">5</div>
+      <div class="timeline-card">
+        <h3>ETL Vendor Order Automation</h3>
+        <p class="timeline-date">2025 &middot; Project</p>
+        <p>SharePoint &rarr; Python &rarr; SQL &rarr; Power Automate &rarr; SAP pipeline that automated vendor order conversions, improving data accuracy by 95%.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-type="education">
+      <div class="timeline-node">4</div>
+      <div class="timeline-card">
+        <h3>Concordia University</h3>
+        <p class="timeline-date">Jan 2023 &ndash; Oct 2024 &middot; Montreal, Quebec</p>
+        <p class="timeline-role">Masters in Industrial Engineering</p>
+        <p>Specialization: Industrial Optimization and System Analytics</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-type="employment">
+      <div class="timeline-node">3</div>
+      <div class="timeline-card">
+        <h3>Lufa Farms</h3>
+        <p class="timeline-date">Jan 2023 &ndash; Mar 2023 &middot; Montreal, Quebec</p>
+        <p class="timeline-role">Inventory Associate</p>
+        <p>Streamlined ERP updates for 200+ products, improving line efficiency by 12% and reducing inventory holding costs by 15%.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-type="employment">
+      <div class="timeline-node">2</div>
+      <div class="timeline-card">
+        <h3>Abs Manufacturing</h3>
+        <p class="timeline-date">Jan 2022 &ndash; Dec 2022 &middot; India</p>
+        <p class="timeline-role">Supply Chain Data Analyst</p>
+        <p>Built KPI-based inventory reports in Power BI, SQL and Excel, accelerating project completion by 25% and cutting holding costs by 15%.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal" data-type="education">
+      <div class="timeline-node">1</div>
+      <div class="timeline-card">
+        <h3>Aligarh Muslim University</h3>
+        <p class="timeline-date">Aug 2018 &ndash; May 2022 &middot; India</p>
+        <p class="timeline-role">Bachelor of Technology in Mechanical Engineering</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact reveal">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <div class="contact-connect">
+      <p class="contact-label">CONNECT</p>
+      <div class="contact-icons">
+        <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener" class="contact-icon"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:farazomar4@gmail.com" class="contact-icon"><i class="bi bi-envelope-fill"></i></a>
+        <a href="tel:+14384671600" class="contact-icon"><i class="bi bi-telephone-fill"></i></a>
+        <a href="assets/resume.pdf" download class="contact-icon"><i class="bi bi-file-earmark-arrow-down-fill"></i></a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Add Your Message Here" rows="6" required></textarea>
+      <button type="submit" class="btn btn--outline">SEND</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-logo">FO</div>
+    <div class="footer-col">
+      <p class="footer-col__title">CONNECT</p>
+      <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:farazomar4@gmail.com">Email</a>
+      <a href="tel:+14384671600">Phone</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col__title">EXPLORE</p>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#achievements">Highlights</a>
+      <a href="#timeline">Timeline</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright <span id="year"></span> &copy; Faraz Omar, All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- DOCK NAV -->
+<nav class="dock">
+  <a href="#home" class="dock-item active" data-section="home"><i class="bi bi-house-fill"></i></a>
+  <a href="#about" class="dock-item" data-section="about"><i class="bi bi-person-fill"></i></a>
+  <a href="#skills" class="dock-item" data-section="skills"><i class="bi bi-gear-fill"></i></a>
+  <a href="#achievements" class="dock-item" data-section="achievements"><i class="bi bi-briefcase-fill"></i></a>
+  <a href="#timeline" class="dock-item" data-section="timeline"><i class="bi bi-clock-fill"></i></a>
+  <a href="#contact" class="dock-item" data-section="contact"><i class="bi bi-envelope-fill"></i></a>
+</nav>
+
+<script src="js/script.js"></script>
+</body>
 </html>
