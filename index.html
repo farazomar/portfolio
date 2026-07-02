@@ -1,302 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faraz Omar | Portfolio</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23101011'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='700' fill='%2306d6a0' text-anchor='middle'%3EFO%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faraz Omar — Data Analyst</title>
+  <meta name="description" content="Faraz Omar — Microsoft-certified Data Analyst in Toronto. Building automated pipelines and real-time dashboards with Python, SQL, Tableau and Power BI." />
+  <meta name="theme-color" content="#0b0b09" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230B0B09'/%3E%3Ctext x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%23C8F04B' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
 
-<!-- Side fixed bits -->
-<div class="side-text side-text--left">farazomar4@gmail.com</div>
-<div class="side-text side-text--phone">(438) 467-1600</div>
-<div class="side-socials">
-  <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-  <a href="mailto:farazomar4@gmail.com" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
-  <span class="side-line"></span>
-</div>
-
-<!-- HERO -->
-<section id="home" class="section hero">
-  <div class="hero-photo">
-    <div class="hero-photo__mask">
-      <img src="assets/avatar.jpg" alt="Faraz Omar">
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <span class="preloader-name">FARAZ&nbsp;OMAR</span>
+      <span class="preloader-tick mono" id="preloaderTick">000</span>
     </div>
   </div>
-  <div class="hero-code">
-    <div class="hero-code__bar"><span></span><span></span><span></span></div>
-    <div class="hero-code__body" id="hero-typing"></div>
-  </div>
-  <div class="hero-text">
-    <p class="hero-greet">Hello, I'm</p>
-    <h1 class="hero-name">Faraz Omar</h1>
-    <p class="hero-role">A Supply Chain &amp; Data Analyst</p>
-    <p class="hero-location">Based in Toronto, ON <span class="flag" role="img" aria-label="Canada flag"><svg viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="10" fill="#fff"/><rect width="4" height="10" fill="#d52b1e"/><rect x="12" width="4" height="10" fill="#d52b1e"/><path d="M8 2.2l.5 1.1 1.2-.3-.5 1.1.9.7-1.2.2.1 1.2-1-.6-1 .6.1-1.2-1.2-.2.9-.7-.5-1.1 1.2.3z" fill="#d52b1e"/></svg></span></p>
-  </div>
-  <div class="hero-actions">
-    <a class="btn btn--outline" href="assets/resume.pdf" download>Download Resume</a>
-    <a class="btn btn--filled" href="#about">Know More</a>
-    <a class="btn btn--outline" href="https://learn.microsoft.com/en-gb/users/FarazOmar-9012/credentials/9CE67602448522D6" target="_blank" rel="noopener">Verify Certification</a>
-  </div>
-  <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="bi bi-chevron-down"></i></a>
-</section>
 
-<!-- ABOUT -->
-<section id="about" class="section about reveal">
-  <h2 class="section-title">About Me</h2>
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-  <div class="about-grid">
-    <div class="about-stats">
-      <div class="stat-card reveal">
-        <span class="stat-label">EXPERIENCE</span>
-        <i class="bi bi-award stat-icon"></i>
-        <span class="stat-value">2.5+ Years</span>
+  <!-- grain + grid overlays -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-nav" id="siteNav">
+    <a href="#hero" class="nav-logo" data-hover>FO<span class="accent">.</span></a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about" data-hover data-nav="about">About</a>
+      <a href="#experience" data-hover data-nav="experience">Experience</a>
+      <a href="#skills" data-hover data-nav="skills">Toolkit</a>
+      <a href="#education" data-hover data-nav="education">Education</a>
+      <a href="#contact" data-hover data-nav="contact">Contact</a>
+    </nav>
+
+    <div class="nav-meta mono">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span>Toronto&nbsp;·&nbsp;<span id="navClock">--:--</span></span>
+    </div>
+
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" data-hover>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- mobile overlay menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile">
+      <a href="#about"><span class="mono">01</span>About</a>
+      <a href="#experience"><span class="mono">02</span>Experience</a>
+      <a href="#skills"><span class="mono">03</span>Toolkit</a>
+      <a href="#education"><span class="mono">04</span>Education</a>
+      <a href="#contact"><span class="mono">05</span>Contact</a>
+    </nav>
+    <div class="mobile-menu-foot mono">farazomar4@gmail.com</div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow mono" data-reveal>
+          <span class="eyebrow-diamond" aria-hidden="true">◆</span>
+          Microsoft-certified Data Analyst&nbsp;—&nbsp;PL-300
+        </p>
+
+        <h1 class="hero-title" aria-label="Faraz Omar">
+          <span class="hero-line"><span class="split" data-split>FARAZ</span></span>
+          <span class="hero-line hero-line--outline"><span class="split" data-split>OMAR</span></span>
+        </h1>
+
+        <div class="hero-lower">
+          <p class="hero-sub" data-reveal>
+            I turn messy supply-chain data into <em>automated pipelines</em> and
+            <em>dashboards people actually use</em> — currently doing exactly that
+            at Loblaw Companies in Toronto.
+          </p>
+
+          <div class="hero-meta" data-reveal>
+            <div class="hero-meta-item mono">
+              <span class="hero-meta-label">Based in</span>
+              <span>Toronto, ON — Canada</span>
+            </div>
+            <div class="hero-meta-item mono">
+              <span class="hero-meta-label">Currently</span>
+              <span>Data Analyst @ Loblaw</span>
+            </div>
+            <div class="hero-meta-item mono">
+              <span class="hero-meta-label">Status</span>
+              <span><span class="status-dot" aria-hidden="true"></span> Open to opportunities</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- decorative sparkline -->
+        <svg class="hero-spark" viewBox="0 0 640 220" fill="none" aria-hidden="true" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#C8F04B" stop-opacity="0.16" />
+              <stop offset="1" stop-color="#C8F04B" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path id="sparkArea" d="M0 200 L60 178 L120 186 L180 150 L240 158 L300 118 L360 130 L420 88 L480 96 L540 52 L640 20 L640 220 L0 220 Z" fill="url(#sparkFill)"/>
+          <path id="sparkLine" d="M0 200 L60 178 L120 186 L180 150 L240 158 L300 118 L360 130 L420 88 L480 96 L540 52 L640 20" stroke="#C8F04B" stroke-width="2"/>
+          <circle id="sparkDot" cx="640" cy="20" r="4" fill="#C8F04B"/>
+        </svg>
       </div>
-      <div class="stat-card reveal">
-        <span class="stat-label">PROJECTS</span>
-        <i class="bi bi-folder2-open stat-icon"></i>
-        <span class="stat-value">4+</span>
-      </div>
-      <div class="stat-card reveal">
-        <span class="stat-label">CERTIFICATIONS</span>
-        <i class="bi bi-patch-check stat-icon"></i>
-        <span class="stat-value">1 Active</span>
-      </div>
-    </div>
 
-    <div class="about-copy reveal">
-      <p>Here's a gist, I'm a Master's graduate in Industrial Engineering from <strong>Concordia University</strong> and a Supply Chain &amp; Data Analyst by profession. As an undergraduate, I hold a Bachelor's degree in Mechanical Engineering from <strong>Aligarh Muslim University</strong>, India.</p>
-      <p>I've worked on several projects throughout the years which includes ETL Pipeline Development, Demand Forecasting Automation, SAP Process Automation and KPI Reporting &amp; Analytics.</p>
-      <p>I believe in qualitative work rather than quantitative and believe that my skills will support your business to succeed in your supply chain and data objectives.</p>
-      <p>Feel free to get in touch.</p>
-      <a href="#contact" class="btn btn--filled">Let's Talk</a>
-    </div>
+      <a href="#about" class="scroll-cue mono" data-hover data-reveal>
+        <span>Scroll</span>
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
 
-    <div class="about-deco" aria-hidden="true">
-      <svg viewBox="0 0 220 220" width="220" height="220">
-        <circle cx="60" cy="160" r="34" fill="none" stroke="#3a3a3f" stroke-width="2" stroke-dasharray="4 6"/>
-        <circle cx="60" cy="160" r="8" fill="#f1faee"/>
-        <polygon points="150,40 170,70 130,70" fill="none" stroke="#06d6a0" stroke-width="2"/>
-        <rect x="120" y="110" width="80" height="60" rx="6" fill="none" stroke="#3a3a3f" stroke-width="2"/>
-        <line x1="120" y1="130" x2="200" y2="130" stroke="#3a3a3f" stroke-width="2"/>
-        <path d="M40 60 q20 -30 10 -50" fill="none" stroke="#06d6a0" stroke-width="2"/>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section skills reveal">
-  <h2 class="section-title">Skills</h2>
-
-  <div class="skill-category">
-    <p class="skill-category__label">PROGRAMMING &amp; DATA</p>
-    <div class="skill-grid">
-      <div class="skill-card reveal"><i class="bi bi-filetype-py skill-icon"></i><span>PYTHON</span><div class="skill-bar"><span style="width:92%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-database skill-icon"></i><span>SQL</span><div class="skill-bar"><span style="width:85%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-code-slash skill-icon"></i><span>VBA</span><div class="skill-bar"><span style="width:80%"></span></div></div>
-    </div>
-  </div>
-
-  <div class="skill-category">
-    <p class="skill-category__label">ANALYSIS &amp; OPTIMIZATION</p>
-    <div class="skill-grid">
-      <div class="skill-card reveal"><i class="bi bi-search skill-icon"></i><span>ROOT CAUSE ANALYSIS</span><div class="skill-bar"><span style="width:90%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-arrow-repeat skill-icon"></i><span>CONTINUOUS IMPROVEMENT</span><div class="skill-bar"><span style="width:88%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-graph-up-arrow skill-icon"></i><span>LEAN SIX SIGMA</span><div class="skill-bar"><span style="width:85%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-diagram-3 skill-icon"></i><span>DMAIC</span><div class="skill-bar"><span style="width:82%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-bar-chart-line skill-icon"></i><span>DEMAND FORECASTING</span><div class="skill-bar"><span style="width:90%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-clock-history skill-icon"></i><span>TIME-SERIES ANALYSIS</span><div class="skill-bar"><span style="width:80%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-clipboard-data skill-icon"></i><span>KPI REPORTING</span><div class="skill-bar"><span style="width:88%"></span></div></div>
-    </div>
-  </div>
-
-  <div class="skill-category">
-    <p class="skill-category__label">SUPPLY CHAIN SYSTEMS</p>
-    <div class="skill-grid">
-      <div class="skill-card reveal"><i class="bi bi-truck skill-icon"></i><span>BLUE YONDER LDE</span><div class="skill-bar"><span style="width:88%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-boxes skill-icon"></i><span>IPFR</span><div class="skill-bar"><span style="width:80%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-building skill-icon"></i><span>SAP</span><div class="skill-bar"><span style="width:82%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-diagram-2 skill-icon"></i><span>ERP / MRP</span><div class="skill-bar"><span style="width:78%"></span></div></div>
-    </div>
-  </div>
-
-  <div class="skill-category">
-    <p class="skill-category__label">TOOLS</p>
-    <div class="skill-grid">
-      <div class="skill-card reveal"><i class="bi bi-bar-chart skill-icon"></i><span>POWER BI</span><div class="skill-bar"><span style="width:92%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-lightning-charge skill-icon"></i><span>POWER AUTOMATE</span><div class="skill-bar"><span style="width:88%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-file-earmark-spreadsheet skill-icon"></i><span>EXCEL</span><div class="skill-bar"><span style="width:92%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-server skill-icon"></i><span>MS ACCESS</span><div class="skill-bar"><span style="width:75%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-share skill-icon"></i><span>SHAREPOINT</span><div class="skill-bar"><span style="width:80%"></span></div></div>
-      <div class="skill-card reveal"><i class="bi bi-graph-up skill-icon"></i><span>TABLEAU</span><div class="skill-bar"><span style="width:78%"></span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ACHIEVEMENTS (replaces Portfolio) -->
-<section id="achievements" class="section achievements reveal">
-  <h2 class="section-title">Highlights</h2>
-  <div class="achv-grid">
-    <article class="achv-card reveal">
-      <i class="bi bi-diagram-3-fill achv-icon"></i>
-      <h3>ETL AUTOMATION PIPELINE</h3>
-      <p class="achv-sub">SharePoint &rarr; Python &rarr; SQL &rarr; Power Automate &rarr; SAP</p>
-      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> 95% improvement in data accuracy</p>
-    </article>
-    <article class="achv-card reveal">
-      <i class="bi bi-bar-chart-steps achv-icon"></i>
-      <h3>DEMAND FORECAST AUTOMATION</h3>
-      <p class="achv-sub">Python automation built on Blue Yonder LDE APIs</p>
-      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> Automated exception flagging for weekly review</p>
-    </article>
-    <article class="achv-card reveal">
-      <i class="bi bi-gear-wide-connected achv-icon"></i>
-      <h3>SAP PROCESS AUTOMATION</h3>
-      <p class="achv-sub">Built with Python, SQL &amp; Excel (VBA)</p>
-      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> Eliminated high-volume manual data processes</p>
-    </article>
-    <a class="achv-card reveal achv-card--link" href="https://learn.microsoft.com/en-gb/users/FarazOmar-9012/credentials/9CE67602448522D6" target="_blank" rel="noopener">
-      <i class="bi bi-patch-check-fill achv-icon"></i>
-      <h3>PL-300 CERTIFIED</h3>
-      <p class="achv-sub">Microsoft Power BI Data Analyst Associate</p>
-      <p class="achv-result"><i class="bi bi-arrow-up-right"></i> Verify Certification</p>
-    </a>
-  </div>
-</section>
-
-<!-- TIMELINE -->
-<section id="timeline" class="section timeline-section reveal">
-  <h2 class="section-title">Timeline</h2>
-  <div class="timeline-legend">
-    <span><i class="dot dot--employment"></i> Employment</span>
-    <span><i class="dot dot--project"></i> Projects</span>
-    <span><i class="dot dot--education"></i> Education</span>
-  </div>
-
-  <div class="timeline reveal">
-    <div class="timeline-item reveal" data-type="employment">
-      <div class="timeline-node">6</div>
-      <div class="timeline-card">
-        <h3>Loblaw Companies Limited</h3>
-        <p class="timeline-date">Jun 2025 &ndash; Present &middot; Brampton, Ontario</p>
-        <p class="timeline-role">Supply Chain Replenishment Analyst</p>
-        <p>Built end-to-end ETL and demand-forecast automation pipelines spanning Python, SQL, SAP and Power Automate.</p>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span>SQL <i>◆</i> Python <i>◆</i> Tableau <i>◆</i> Power BI <i>◆</i> Excel + VBA <i>◆</i> Process Automation <i>◆</i> Demand Forecasting <i>◆</i> KPI Reporting <i>◆</i>&nbsp;</span>
+        <span>SQL <i>◆</i> Python <i>◆</i> Tableau <i>◆</i> Power BI <i>◆</i> Excel + VBA <i>◆</i> Process Automation <i>◆</i> Demand Forecasting <i>◆</i> KPI Reporting <i>◆</i>&nbsp;</span>
       </div>
     </div>
 
-    <div class="timeline-item reveal" data-type="project">
-      <div class="timeline-node">5</div>
-      <div class="timeline-card">
-        <h3>ETL Vendor Order Automation</h3>
-        <p class="timeline-date">2025 &middot; Project</p>
-        <p>SharePoint &rarr; Python &rarr; SQL &rarr; Power Automate &rarr; SAP pipeline that automated vendor order conversions, improving data accuracy by 95%.</p>
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="section-head">
+        <span class="section-index mono" data-reveal>(01)</span>
+        <h2 class="section-title" data-reveal>About</h2>
       </div>
-    </div>
 
-    <div class="timeline-item reveal" data-type="education">
-      <div class="timeline-node">4</div>
-      <div class="timeline-card">
-        <h3>Concordia University</h3>
-        <p class="timeline-date">Jan 2023 &ndash; Oct 2024 &middot; Montreal, Quebec</p>
-        <p class="timeline-role">Masters in Industrial Engineering</p>
-        <p>Specialization: Industrial Optimization and System Analytics</p>
+      <div class="about-grid">
+        <p class="about-lede" data-reveal>
+          I'm a data analyst who sits <em>between</em> business and technical teams —
+          defining the metrics that matter, automating the parts nobody should be
+          doing by hand, and building the dashboards that give everyone the same
+          version of the truth.
+        </p>
+        <p class="about-body" data-reveal>
+          My background is industrial engineering, which means I think in systems:
+          where the bottleneck is, why the error keeps happening, and what a process
+          should look like once the manual steps are scripted away. If a workflow
+          eats five hours a week, I can't resist turning it into twenty lines of Python.
+        </p>
       </div>
-    </div>
 
-    <div class="timeline-item reveal" data-type="employment">
-      <div class="timeline-node">3</div>
-      <div class="timeline-card">
-        <h3>Lufa Farms</h3>
-        <p class="timeline-date">Jan 2023 &ndash; Mar 2023 &middot; Montreal, Quebec</p>
-        <p class="timeline-role">Inventory Associate</p>
-        <p>Streamlined ERP updates for 200+ products, improving line efficiency by 12% and reducing inventory holding costs by 15%.</p>
+      <div class="stats-grid" data-reveal-group>
+        <div class="stat">
+          <span class="stat-value"><span data-count="95">0</span><span class="stat-unit">%</span></span>
+          <span class="stat-label mono">Data-accuracy improvement from pipeline automation</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span data-count="5">0</span><span class="stat-unit">hrs</span></span>
+          <span class="stat-label mono">Saved per week through SAP process automation</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span data-count="2000">0</span><span class="stat-unit">+</span></span>
+          <span class="stat-label mono">Store forecasts monitored for anomalies</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value"><span data-count="20">0</span><span class="stat-unit">%</span></span>
+          <span class="stat-label mono">Faster project delivery via cross-team reporting</span>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="timeline-item reveal" data-type="employment">
-      <div class="timeline-node">2</div>
-      <div class="timeline-card">
-        <h3>Abs Manufacturing</h3>
-        <p class="timeline-date">Jan 2022 &ndash; Dec 2022 &middot; India</p>
-        <p class="timeline-role">Supply Chain Data Analyst</p>
-        <p>Built KPI-based inventory reports in Power BI, SQL and Excel, accelerating project completion by 25% and cutting holding costs by 15%.</p>
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section experience" id="experience">
+      <div class="section-head">
+        <span class="section-index mono" data-reveal>(02)</span>
+        <h2 class="section-title" data-reveal>Experience</h2>
       </div>
-    </div>
 
-    <div class="timeline-item reveal" data-type="education">
-      <div class="timeline-node">1</div>
-      <div class="timeline-card">
-        <h3>Aligarh Muslim University</h3>
-        <p class="timeline-date">Aug 2018 &ndash; May 2022 &middot; India</p>
-        <p class="timeline-role">Bachelor of Technology in Mechanical Engineering</p>
+      <div class="timeline">
+        <div class="timeline-rail" aria-hidden="true"><span class="timeline-progress" id="timelineProgress"></span></div>
+
+        <article class="job" data-reveal>
+          <div class="job-head">
+            <div>
+              <h3 class="job-company">Loblaw Companies Limited</h3>
+              <p class="job-role">Supply Chain Replenishment <em>Data Analyst</em></p>
+            </div>
+            <div class="job-when mono">
+              <span>Jun 2025 — Present</span>
+              <span class="job-where">Brampton, ON</span>
+            </div>
+          </div>
+          <ul class="job-points">
+            <li>Built an automated SharePoint-to-SAP pipeline (Python, SQL) that removed manual vendor-order data entry for the Store Support team — improving data accuracy by <strong>95%</strong>.</li>
+            <li>Designed an exception-detection pipeline over <strong>2,000+</strong> store forecasts (Python, API extraction) that flags and logs anomalies for weekly review, giving planners a structured queue of issues.</li>
+            <li>Eliminated high-volume manual processes for Store Demand Planning with SAP automation (Python, SQL, VBA), then documented and trained the team — saving <strong>5&nbsp;hrs/week</strong>.</li>
+            <li>Built and maintain real-time dashboards in Mode with consistent metric definitions, so stakeholders spot supply-chain performance trends at a glance.</li>
+          </ul>
+          <div class="job-tags mono">
+            <span>Python</span><span>SQL</span><span>VBA</span><span>SAP</span><span>Mode</span><span>SharePoint</span><span>APIs</span>
+          </div>
+        </article>
+
+        <article class="job" data-reveal>
+          <div class="job-head">
+            <div>
+              <h3 class="job-company">Abs Manufacturing</h3>
+              <p class="job-role">Supply Chain <em>Data Analyst</em></p>
+            </div>
+            <div class="job-when mono">
+              <span>Jan 2022 — Dec 2022</span>
+              <span class="job-where">India</span>
+            </div>
+          </div>
+          <ul class="job-points">
+            <li>Accelerated project completion by <strong>20%</strong> by wiring direct communication between the data team and department heads, cutting inventory discrepancies with Power BI.</li>
+            <li>Reduced inventory holding costs by <strong>8%</strong> with KPI-based inventory reporting in Power BI, SQL and Excel, while managing purchase orders against service-level targets.</li>
+          </ul>
+          <div class="job-tags mono">
+            <span>Power BI</span><span>SQL</span><span>Excel</span><span>KPI Reporting</span>
+          </div>
+        </article>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section contact reveal">
-  <h2 class="section-title">Contact</h2>
-  <div class="contact-grid">
-    <div class="contact-connect">
-      <p class="contact-label">CONNECT</p>
-      <div class="contact-icons">
-        <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener" class="contact-icon"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:farazomar4@gmail.com" class="contact-icon"><i class="bi bi-envelope-fill"></i></a>
-        <a href="tel:+14384671600" class="contact-icon"><i class="bi bi-telephone-fill"></i></a>
-        <a href="assets/resume.pdf" download class="contact-icon"><i class="bi bi-file-earmark-arrow-down-fill"></i></a>
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="section-head">
+        <span class="section-index mono" data-reveal>(03)</span>
+        <h2 class="section-title" data-reveal>Toolkit</h2>
       </div>
-    </div>
 
-    <form class="contact-form" id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Add Your Message Here" rows="6" required></textarea>
-      <button type="submit" class="btn btn--outline">SEND</button>
-    </form>
-  </div>
-</section>
+      <div class="skills-grid" data-reveal-group>
+        <div class="skill-card" data-hover-card>
+          <span class="skill-index mono">01</span>
+          <h3>Data &amp; Analytics</h3>
+          <ul>
+            <li>SQL</li>
+            <li>Python — pandas, APIs, automation</li>
+            <li>Quantitative &amp; root-cause analysis</li>
+            <li>Exception detection</li>
+            <li>Demand forecasting &amp; time-series</li>
+            <li>KPI reporting · A/B testing</li>
+            <li>AI coding &amp; analytics tools</li>
+          </ul>
+        </div>
+        <div class="skill-card" data-hover-card>
+          <span class="skill-index mono">02</span>
+          <h3>Reporting &amp; Visualization</h3>
+          <ul>
+            <li>Tableau</li>
+            <li>Power BI</li>
+            <li>Mode dashboards</li>
+            <li>Excel — advanced, VBA</li>
+            <li>Consistent metric definitions</li>
+            <li>Stakeholder-ready storytelling</li>
+          </ul>
+        </div>
+        <div class="skill-card" data-hover-card>
+          <span class="skill-index mono">03</span>
+          <h3>Process &amp; Automation</h3>
+          <ul>
+            <li>Process design for error reduction</li>
+            <li>Power Automate</li>
+            <li>SAP workflow automation</li>
+            <li>Lean Six Sigma · DMAIC</li>
+            <li>Documentation &amp; team training</li>
+          </ul>
+        </div>
+      </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-logo">FO</div>
-    <div class="footer-col">
-      <p class="footer-col__title">CONNECT</p>
-      <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:farazomar4@gmail.com">Email</a>
-      <a href="tel:+14384671600">Phone</a>
-    </div>
-    <div class="footer-col">
-      <p class="footer-col__title">EXPLORE</p>
-      <a href="#about">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#achievements">Highlights</a>
-      <a href="#timeline">Timeline</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>Copyright <span id="year"></span> &copy; Faraz Omar, All Rights Reserved.</p>
-  </div>
-</footer>
+      <a class="cert-bar" href="https://learn.microsoft.com/api/credentials/share/en-gb/FarazOmar-9012/9CE67602448522D6?sharingId=9893B5D0582226C" target="_blank" rel="noopener noreferrer" data-hover data-reveal>
+        <span class="cert-badge mono">PL-300</span>
+        <span class="cert-text">Microsoft Certified — Power BI Data Analyst Associate</span>
+        <span class="cert-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
 
-<!-- DOCK NAV -->
-<nav class="dock">
-  <a href="#home" class="dock-item active" data-section="home"><i class="bi bi-house-fill"></i></a>
-  <a href="#about" class="dock-item" data-section="about"><i class="bi bi-person-fill"></i></a>
-  <a href="#skills" class="dock-item" data-section="skills"><i class="bi bi-gear-fill"></i></a>
-  <a href="#achievements" class="dock-item" data-section="achievements"><i class="bi bi-briefcase-fill"></i></a>
-  <a href="#timeline" class="dock-item" data-section="timeline"><i class="bi bi-clock-fill"></i></a>
-  <a href="#contact" class="dock-item" data-section="contact"><i class="bi bi-envelope-fill"></i></a>
-</nav>
+    <!-- ============ EDUCATION ============ -->
+    <section class="section education" id="education">
+      <div class="section-head">
+        <span class="section-index mono" data-reveal>(04)</span>
+        <h2 class="section-title" data-reveal>Education</h2>
+      </div>
 
-<script src="js/script.js"></script>
+      <div class="edu-grid" data-reveal-group>
+        <article class="edu-card" data-hover-card>
+          <span class="edu-when mono">Jan 2023 — Oct 2024</span>
+          <h3>Concordia University</h3>
+          <p class="edu-degree">Master's in <em>Industrial Engineering</em></p>
+          <p class="edu-note">Specialization: Industrial Optimization &amp; System Analytics</p>
+          <span class="edu-where mono">Montréal, QC</span>
+        </article>
+        <article class="edu-card" data-hover-card>
+          <span class="edu-when mono">Aug 2018 — May 2022</span>
+          <h3>Aligarh Muslim University</h3>
+          <p class="edu-degree">Bachelor's in <em>Mechanical Engineering</em></p>
+          <p class="edu-note">Foundation in systems, manufacturing &amp; operations</p>
+          <span class="edu-where mono">India</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-inner">
+        <span class="section-index mono" data-reveal>(05)&nbsp;&nbsp;Contact</span>
+        <h2 class="contact-title" data-reveal>
+          Have data?<br /><em>Let's make it talk.</em>
+        </h2>
+        <p class="contact-sub" data-reveal>
+          Open to data analyst &amp; analytics engineering roles — or just a good
+          conversation about automating the boring stuff.
+        </p>
+
+        <a href="mailto:farazomar4@gmail.com" class="contact-cta" data-magnetic data-hover data-reveal>
+          <span>farazomar4@gmail.com</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+
+        <div class="contact-links" data-reveal-group>
+          <a href="https://www.linkedin.com/in/faraz-omar" target="_blank" rel="noopener noreferrer" data-hover class="contact-link mono">LinkedIn ↗</a>
+          <a href="Faraz_Omar_Resume.pdf" target="_blank" rel="noopener" data-hover class="contact-link mono">Résumé ↓</a>
+          <a href="tel:+14384671600" data-hover class="contact-link mono">(438) 467-1600</a>
+          <a href="https://learn.microsoft.com/api/credentials/share/en-gb/FarazOmar-9012/9CE67602448522D6?sharingId=9893B5D0582226C" target="_blank" rel="noopener noreferrer" data-hover class="contact-link mono">PL-300 Credential ↗</a>
+        </div>
+      </div>
+
+      <footer class="site-foot">
+        <span class="mono">© 2026 Faraz Omar</span>
+        <span class="mono">Toronto, ON — <span id="footClock">--:--</span></span>
+        <a href="#hero" class="mono" data-hover>Back to top ↑</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- libs -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </body>
 </html>
